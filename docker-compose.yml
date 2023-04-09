@@ -19,7 +19,7 @@ services:
     container_name: grafana
     restart: always
     volumes:
-      - ./data/grafana:/var/lib/grafana
+      - ./.docker-data/grafana:/var/lib/grafana
     ports:
       - "4000:3000"
     depends_on:
@@ -35,7 +35,7 @@ services:
       RABBITMQ_DEFAULT_USER: logisticlab
       RABBITMQ_DEFAULT_PASS: root
     volumes:
-      - ./data/rabbitmq:/var/lib/rabbitmq
+      - ./.docker-data/rabbitmq:/var/lib/rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"

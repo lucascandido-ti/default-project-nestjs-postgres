@@ -416,7 +416,9 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,git,node,yarn,visualstudiocode,webstorm,jetbrains
 
 ### docker ###
-data
+.docker-data
+.docker-data/*
+
 
 ### turborepo ###
 .turbo
