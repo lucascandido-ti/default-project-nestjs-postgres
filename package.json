@@ -5,13 +5,19 @@
   "author": "Lucas Candido <lucascandido.ti@gmail.com>",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api":"yarn workspace @logisticlab/api",
+    "build":"turbo run build",
+    "dev":"yarn api start:dev"
   },
+  "workspaces":[
+    "packages/*"
+  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.38.0",
     "prettier": "^2.8.7",
+    "turbo": "^1.8.8",
     "typescript": "^5.0.4"
   }
 }
