@@ -1,11 +1,15 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { ThrottlerModule } from '@nestjs/throttler';
+import { CacheModule } from '@nestjs/cache-manager';
 
-import { configModuleOptions } from './config';
+import { cacheModuleOptions, configModuleOptions, throttlerModuleOptions } from './config';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(configModuleOptions)
+    CacheModule.register(cacheModuleOptions),
+    ConfigModule.forRoot(configModuleOptions),
+    ThrottlerModule.forRootAsync(throttlerModuleOptions)
   ],
 })
 export class AppModule {}
