@@ -6,13 +6,13 @@ services:
     container_name: dbpostgres
     restart: always
     environment:
-      POSTGRES_USER: logisticlab
+      POSTGRES_USER: admin
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: dblogisticlab
+      POSTGRES_DB: dbproject
     ports:
       - "5432:5432"
     networks:
-      - logisticlab
+      - defaultproject
 
   grafana:
     image: grafana/grafana:latest
@@ -25,14 +25,14 @@ services:
     depends_on:
       - postgres
     networks:
-      - logisticlab
+      - defaultproject
 
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     restart: always
     environment:
-      RABBITMQ_DEFAULT_USER: logisticlab
+      RABBITMQ_DEFAULT_USER: admin
       RABBITMQ_DEFAULT_PASS: root
     volumes:
       - ./.docker-data/rabbitmq:/var/lib/rabbitmq
@@ -40,8 +40,8 @@ services:
       - "5672:5672"
       - "15672:15672"
     networks:
-      - logisticlab
+      - defaultproject
 
 networks:
-  logisticlab:
+  defaultproject:
     driver: bridge
