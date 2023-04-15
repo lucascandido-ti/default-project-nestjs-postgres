@@ -1,11 +1,10 @@
 {
-  "name": "logisticlab",
+  "name": "project",
   "version": "1.0.0",
-  "description": "POC Transportadora",
   "author": "Lucas Candido <lucascandido.ti@gmail.com>",
   "private": true,
   "scripts": {
-    "api":"yarn workspace @logisticlab/api",
+    "api":"yarn workspace @project/api",
     "build":"turbo run build",
     "dev":"yarn api start:dev"
   },
