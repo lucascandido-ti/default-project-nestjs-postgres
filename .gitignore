@@ -422,3 +422,6 @@ $RECYCLE.BIN/
 
 ### turborepo ###
 .turbo
+
+
+packages/api/src/settings.json

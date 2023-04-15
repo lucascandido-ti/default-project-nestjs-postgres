@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "redhat.vscode-yaml"
+  ]
+}

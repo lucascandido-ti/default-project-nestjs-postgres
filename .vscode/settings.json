@@ -1,0 +1,11 @@
+{
+  "debug.javascript.autoAttachFilter": "smart",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "[markdown]": {
+    "editor.wordWrap": "on",
+  }
+}
