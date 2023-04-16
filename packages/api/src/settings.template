@@ -2,7 +2,15 @@
   "api":{
     "url":"http://localhost:3333",
     "port":"3333",
-    "prefix":"api"
+    "prefix":"api",
+    "cache":{
+      "max":10,
+      "ttl":5
+    },
+    "throttler":{
+      "limit":1000,
+      "ttl":60
+    }
   },
   "db":{
     "client":{
