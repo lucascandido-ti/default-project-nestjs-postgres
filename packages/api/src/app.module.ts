@@ -6,13 +6,15 @@ import { ThrottlerModule } from '@nestjs/throttler';
 
 import { clientTypeOrmOptions } from './db';
 import { cacheModuleOptions, configModuleOptions, throttlerModuleOptions } from './config';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
     CacheModule.register(cacheModuleOptions),
     ConfigModule.forRoot(configModuleOptions),
     ThrottlerModule.forRootAsync(throttlerModuleOptions),
-    TypeOrmModule.forRootAsync(clientTypeOrmOptions)
+    TypeOrmModule.forRootAsync(clientTypeOrmOptions),
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
